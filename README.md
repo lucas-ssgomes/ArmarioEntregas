@@ -1,6 +1,7 @@
-# Armario de Entregas
+# Armário de Entregas
 Sistema de gerenciamento de um serviço de Entregas em Armários. Desenvolvido inicialmente como um projeto de conclusão.
 Projeto de intenção semelhante aos **Amazon Lockers**
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
