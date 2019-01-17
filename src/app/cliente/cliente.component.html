@@ -1,3 +1,25 @@
-<p>
-  cliente works!
-</p>
+<div class="content card">
+  <h4>Cadastro de Cliente</h4>
+  
+  <div>
+    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" [(ngModel)]="novoCliente.nome" />
+  </div>
+
+  <div class="input-field col s6">
+    <input id="sobrenome" type="text" class="validate">
+    <label for="sobrenome">Sobrenome</label>
+  </div>
+
+  <div>
+    <input type="text" class="form-control" id="email" placeholder="Digite seu email" [(ngModel)]="novoCliente.email" />
+  </div>
+
+  <div>
+    <input type="text" class="form-control" id="senha" placeholder="Digite sua senha" [(ngModel)]="novoCliente.senha" />
+  </div>
+
+    <div class="button-container">
+      <button [disabled]="!novoCliente.nome || !novoCliente.sobrenome || 
+    !novoCliente.email || !novoCliente.senha"
+        (click)="cadastrar()">cadastrar</button>
+    </div>

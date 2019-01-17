@@ -2,27 +2,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {environment} from '../environments/environment';
+import { RouterModule } from '@angular/router';
+// import { AppRoutingModule } from './app-routing.module';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { RouterModule } from '@angular/router';
 import { ClienteComponent } from './cliente/cliente.component';
+import { DbService } from './servicos/db.service';
+import { MaterializeModule } from 'angular2-materialize';
+import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClienteComponent
+    ClienteComponent,
+    PaginaInicialComponent
   ],
   imports: [
     BrowserModule,
+    MaterializeModule,
+    // AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabase,
     RouterModule.forRoot([
-      { path: 'cliente', component: ClienteComponent },
+      { path: 'cliente', component: ClienteComponent }
     ])
   ],
-  providers: [AngularFireDatabase],
+  providers: [DbService, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
