@@ -1,3 +1,4 @@
+<!--Menu NavBar que iria usar inicialmente-->
 <!--
 <nav>
     <div class="nav-wrapper">
@@ -7,8 +8,10 @@
       </ul>
     </div>
   </nav>
+-->
 
-  
+  <!--Exemplo de Menu NavBar padrão do Materialize-->
+  <!--
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
@@ -20,9 +23,24 @@
     </div>
   </nav>
 -->
-<body>
-  <app-pagina-inicial></app-pagina-inicial>
-</body>
+
+<!--<app-pagina-inicial></app-pagina-inicial>-->
+
 <!--
   <router-outlet></router-outlet>
   -->
+
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a  routerLink="cliente"href="#test1">Cliente</a></li>
+        <!--<li class="tab"><a routerLink="lojas" class="active" href="#test2">Loja</a></li>
+        <li class="tab"><a routerLink="listEnderecos" class="active" href="#test3">Lista de Endereços</a></li>
+        <li class="tab"><a routerLink="listLojas"class="active" href="#test4">Lista de Lojas</a></li>-->
+      </ul>
+    </div>
+  </nav>  

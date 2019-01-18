@@ -9,7 +9,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { ClienteComponent } from './cliente/cliente.component';
 import { DbService } from './servicos/db.service';
-import { MaterializeModule } from 'angular2-materialize';
+import 'materialize-css';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 
 
@@ -22,7 +22,6 @@ import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.componen
   ],
   imports: [
     BrowserModule,
-    MaterializeModule,
     // AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot([
