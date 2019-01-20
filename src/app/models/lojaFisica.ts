@@ -5,7 +5,7 @@ export class LojaFisica {
     nomeCompleto: string;
     email: string;
     senha: string;
-    cnpf: string;
+    cnpj: string;
     endereco: string;
     telefone: string;
 }
