@@ -32,9 +32,9 @@ export class ClienteComponent implements OnInit {
   cadastrar() {
     this.database.inserir('clientes', this.novoCliente)
       .then(() => {
-        alert('Cliente cadastrado com sucesso');
         this.novoCliente = new Cliente();
         this.carregarUsuarios();
+        alert('Cliente cadastrado com sucesso');
       });
   }
 

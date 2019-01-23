@@ -1,46 +1,24 @@
-<!--Menu NavBar que iria usar inicialmente-->
-<!--
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="tab"><a  routerLink="/cliente" href="#test1">Cadastrar Cliente</a></li>
-      </ul>
-    </div>
-  </nav>
--->
+<nav class="nav-extended cyan darken-2">
+  <div class="nav-wrapper">
 
-  <!--Exemplo de Menu NavBar padrão do Materialize-->
-  <!--
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  </div>
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab"><a routerLink="cliente" class="active" href="#test1">Cadastrar Cliente</a></li>
+      <li class="tab"><a routerLink="listClientes" class="active" href="#test2">Lista de Clientes</a></li>
+      <!--<li class="tab"><a routerLink="lojas" class="active" href="#test2">Loja</a></li>
+      <li class="tab"><a routerLink="listLojas"class="active" href="#test4">Lista de Lojas</a></li>-->
+    </ul>
+  </div>
+</nav>
+
+<!--
   <nav>
-    <div class="nav-wrapper">
       <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
         <li><a href="badges.html">Components</a></li>
         <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-    </div>
   </nav>
 -->
-
-<!--<app-pagina-inicial></app-pagina-inicial>-->
-
-<!--
-  <router-outlet></router-outlet>
-  -->
-
-  <nav class="nav-extended">
-    <div class="nav-wrapper">
-      
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a  routerLink="cliente"href="#test1">Cliente</a></li>
-        <!--<li class="tab"><a routerLink="lojas" class="active" href="#test2">Loja</a></li>
-        <li class="tab"><a routerLink="listEnderecos" class="active" href="#test3">Lista de Endereços</a></li>
-        <li class="tab"><a routerLink="listLojas"class="active" href="#test4">Lista de Lojas</a></li>-->
-      </ul>
-    </div>
-  </nav>  
+<router-outlet></router-outlet>

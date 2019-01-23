@@ -1,0 +1,73 @@
+<div class="content card">
+
+  <div *ngIf="clientes">
+    <h4>Clientes Cadastrados</h4>
+    <table> 
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+          <th>Email</th>
+          <th>Senha</th>
+          <th>CPF</th>
+          <th>Endereço</th>
+          <th>Telefone</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clientes">
+          <td>
+            <span *ngIf="!cliente.editando">{{cliente.nome}}</span>
+            <input *ngIf="cliente.editando" type="text" name="nome-{{cliente.eid}}"/>
+          </td>
+          <td>
+              <span *ngIf="!cliente.editando">{{cliente.sobrenome}}</span>
+              <input *ngIf="cliente.editando" type="text" name="sobrenome-{{cliente.eid}}"/>
+            </td>
+            <td>
+              <span *ngIf="!cliente.editando">{{cliente.email}}</span>
+              <input *ngIf="cliente.editando" type="text" name="email-{{cliente.eid}}"/>
+            </td>
+
+            <td>
+              <span *ngIf="!cliente.editando">{{cliente.senha}}</span>
+              <input *ngIf="cliente.editando" type="text" name="senha-{{cliente.eid}}"/>
+            </td>
+
+            <td>
+              <span *ngIf="!cliente.editando">{{cliente.cpf}}</span>
+              <input *ngIf="cliente.editando" type="text" name="cpf-{{cliente.eid}}"/>
+            </td>
+
+            <td>
+              <span *ngIf="!cliente.editando">{{cliente.endereco}}</span>
+              <input *ngIf="cliente.editando" type="text" name="endereco-{{cliente.eid}}"/>
+            </td>
+
+            <td>
+              <span *ngIf="!cliente.editando">{{cliente.telefone}}</span>
+              <input *ngIf="cliente.editando" type="text" name="telefone-{{cliente.eid}}" />
+            </td>
+
+          <td *ngIf="!cliente.editando" class="remove-parent">
+            <a class="edit-parent" (click)="editar(cliente)" href="javascript:void(0);">
+              <i class="material-icons">Editar</i>
+            </a>
+            <a (click)="remover(cliente.eid)" href="javascript:void(0);">
+              <i class="material-icons">Deletar</i>
+            </a>
+          </td>
+          <td *ngIf="cliente.editando" class="remove-parent">
+              <a class="confirm-parent" (click)="confirmEdit(cliente)" href="javascript:void(0);">
+                <i class="material-icons">check</i>
+              </a>
+              <a (click)="cancelEdit(cliente)" href="javascript:void(0);">
+                <i class="material-icons">close</i>
+              </a>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
