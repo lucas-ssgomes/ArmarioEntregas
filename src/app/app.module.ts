@@ -11,14 +11,14 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { ClienteComponent } from './cliente/cliente.component';
 import { DbService } from './servicos/db.service';
 import 'materialize-css';
-// import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
+import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { ListClientesComponent } from './list-clientes/list-clientes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    // PaginaInicialComponent,
+    PaginaInicialComponent,
     ClienteComponent,
     ListClientesComponent
   ],
@@ -28,8 +28,9 @@ import { ListClientesComponent } from './list-clientes/list-clientes.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot([
+      { path: 'paginaInicial', component: PaginaInicialComponent },
       { path: 'cliente', component: ClienteComponent },
-      { path: 'listClientes', component: ListClientesComponent }
+      { path: 'listClientes', component: ListClientesComponent },
     ])
   ],
   providers: [DbService, AngularFireDatabase],
