@@ -21,36 +21,33 @@ export class ListClientesComponent implements OnInit {
 
   private carregarClientes() {
     this.carregando = true;
-
     this.database.listar<Cliente>('clientes')
       .then(clientesDB => {
         this.clientes = clientesDB;
         this.carregando = false;
       });
   }
+
   remover(eid: string) {
     this.database.remover('clientes', eid)
       .then(() => {
         alert('Cliente removido com sucesso');
-
         this.carregarClientes();
       });
   }
 
   editar(cliente) {
-    cliente.editando = false;
+    cliente.editando = true;
   }
 
   cancelEdit(cliente) {
     cliente.editando = false;
   }
 
-  confirmeEdit(cliente) {
-    this.database.atualizar('clientes', cliente.eid,
-      {
+  confirmEdit(cliente) {
+    this.database.atualizar('clientes', cliente.eid, {
         nome: cliente.nome, sobrenome: cliente.sobrenome, email: cliente.email,
-        senha: cliente.senha, cpf: cliente.cpf, endereco: cliente.endereco, telefone: cliente.telefone
-      })
+        senha: cliente.senha, cpf: cliente.cpf, endereco: cliente.endereco, telefone: cliente.telefone })
       .then(() => {
         alert('Cliente atualizado com sucesso');
         this.carregarClientes();
