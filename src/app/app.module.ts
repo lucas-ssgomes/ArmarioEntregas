@@ -32,7 +32,7 @@ import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.componen
       { path: 'cliente', component: ClienteComponent },
       { path: 'listClientes', component: ListClientesComponent },
       { path: 'ecommerce', component: EcommerceComponent },
-      {path: 'listEcommerce', component: ListClientesComponent},
+      {path: 'listEcommerce', component: ListEcommerceComponent},
     ])
   ],
   providers: [DbService, AngularFireDatabase],

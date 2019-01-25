@@ -1,3 +1,80 @@
-<p>
-  list-ecommerce works!
-</p>
+<div class="content card">
+    <div *ngIf="ecommerces">
+      <h5>E-commerces Cadastrados</h5>
+      <table> 
+        <thead>
+          <tr>
+            <th>Nome Fantasia</th>
+            <th>Nome Completo</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>CPF/CNPJ</th>
+            <th>Site/Instagram</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr *ngFor="let ecommerce of ecommerces">
+            <td>
+              <span *ngIf="!ecommerce.editando">{{ecommerce.nomeFantasia}}</span>
+              <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.nomeFantasia" name="nomeFantasia-{{ecommerce.eid}}"/>
+            </td>
+            <td>
+                <span *ngIf="!ecommerce.editando">{{ecommerce.nomeCompleto}}</span>
+                <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.nomeCompleto" name="sobrenome-{{ecommerce.eid}}"/>
+              </td>
+              <td>
+                <span *ngIf="!ecommerce.editando">{{ecommerce.email}}</span>
+                <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.email" name="email-{{ecommerce.eid}}"/>
+              </td>
+  
+              <td>
+                <span *ngIf="!ecommerce.editando">{{ecommerce.senha}}</span>
+                <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.senha" name="senha-{{ecommerce.eid}}"/>
+              </td>
+  
+              <td>
+                <span *ngIf="!ecommerce.editando">{{ecommerce.cpfCnpj}}</span>
+                <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.cpfCnpj" name="cpfCnpj-{{ecommerce.eid}}"/>
+              </td>
+
+              <td>
+                  <span *ngIf="!ecommerce.editando">{{ecommerce.site}}</span>
+                  <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.site" name="site-{{ecommerce.eid}}"/>
+                </td>
+  
+              <td>
+                <span *ngIf="!ecommerce.editando">{{ecommerce.endereco}}</span>
+                <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.endereco" name="endereco-{{ecommerce.eid}}"/>
+              </td>
+  
+              <td>
+                <span *ngIf="!ecommerce.editando">{{ecommerce.telefone}}</span>
+                <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.telefone" name="telefone-{{ecommerce.eid}}" />
+              </td>
+  
+            <td *ngIf="!ecommerce.editando" class="remove-parent">
+              <a class="edit-parent" (click)="editar(ecommerce)" href="javascript:void(0);">
+                <button><i class="material-icons">edit</i></button>
+              </a>
+              <a (click)="remover(ecommerce.eid)" href="javascript:void(0);">
+                <button><i class="material-icons">delete</i></button>
+              </a>
+            </td>
+            <td *ngIf="ecommerce.editando" class="remove-parent">
+                <a class="confirm-parent" (click)="confirmEdit(ecommerce)" href="javascript:void(0);">
+                  <button><i class="material-icons">check</i></button>
+                </a>
+                <a (click)="cancelEdit(ecommerce)" href="javascript:void(0);">
+                  <button><i class="material-icons">close</i></button>
+                </a>
+              </td>
+  
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
