@@ -1,3 +1,63 @@
-<p>
-  ecommerce works!
-</p>
+<div class="content card">
+    <h4>Cadastrar E-commerce</h4>
+  
+    <form (ngSubmit)="cadastrar(formNew)" #formNew="ngForm" class="col s6">
+      <div class="row">
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novoEcommerce.nomeFantasia" #nomeFantasia="ngModel" id="nomeFantasia" type="text" class="validate"
+          placeholder="Armario Entregas" name="Nome Fantasia">
+          <label for="nomeFantasia">Nome Fantasia</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novoEcommerce.nomeCompleto" #nomeCompleto="ngModel" id="nomeCompleto" type="text" class="validate"
+          placeholder="João de Silva Sauro" name="Nome Completo">
+          <label for="nomeCompleto">Nome Completo</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novoEcommerce.email" #email="ngModel" id="email" type="email" class="validate"
+          placeholder="joao@armarioentregas.com" name="Email">
+          <label for="email">Email</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novoEcommerce.senha" #senha="ngModel" id="senha" type="password" class="validate" name="Senha">
+          <label for="senha">Senha</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novoEcommerce.cpfCnpj" #cpfCnpj="ngModel" id="cpfCnpj" type="text" class="validate" name="CPF/CNPJ">
+          <label for="cpfCnpj">CPF/CNPJ</label>
+        </div>
+
+        <div class="input-field col s6">
+            <input [(ngModel)]="novoEcommerce.site" #site="ngModel" id="site" type="text" class="validate" 
+            placeholder="instagram.com/armarioentregas" name="Site/Perfil do Instagram">
+            <label for="site">Site/Perfil do Instagram</label>
+          </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novoEcommerce.endereco" #endereco="ngModel" id="endereco" type="text" class="validate" name="Endereço">
+          <label for="endereco">Endereço</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novoEcommerce.telefone" #telefone="ngModel" id="telefone" type="text" class="validate" name="Telefone">
+          <label for="telefone">Telefone</label>
+        </div>
+  
+        <div>
+          <button class="btn right waves-effect waves-lightj" type="submit" name="action" [disabled]="!novoEcommerce.nomeFantasia 
+          || !novoEcommerce.nomeCompleto || !novoEcommerce.email || !novoEcommerce.senha || !novoEcommerce.cpfCnpj || !novoEcommerce.site
+          || !novoEcommerce.endereco || !novoEcommerce.telefone">Cadastrar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+  
+      </div>
+    </form>
+    
+  </div>
+  
