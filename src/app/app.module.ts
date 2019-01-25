@@ -11,15 +11,17 @@ import { AngularFireDatabase } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { DbService } from './servicos/db.service';
 import { ClienteComponent } from './cliente/cliente.component';
-import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { ListClientesComponent } from './list-clientes/list-clientes.component';
+import { EcommerceComponent } from './ecommerce/ecommerce.component';
+import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaginaInicialComponent,
     ClienteComponent,
-    ListClientesComponent
+    ListClientesComponent,
+    EcommerceComponent,
+    ListEcommerceComponent
   ],
   imports: [
     BrowserModule,
@@ -27,9 +29,10 @@ import { ListClientesComponent } from './list-clientes/list-clientes.component';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot([
-      { path: 'paginaInicial', component: PaginaInicialComponent },
       { path: 'cliente', component: ClienteComponent },
       { path: 'listClientes', component: ListClientesComponent },
+      { path: 'ecommerce', component: EcommerceComponent },
+      {path: 'listEcommerce', component: ListClientesComponent},
     ])
   ],
   providers: [DbService, AngularFireDatabase],

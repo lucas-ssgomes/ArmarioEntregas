@@ -1,19 +1,34 @@
 <nav class="nav-extended cyan darken-2">
+
+  <!-- NavBar Principal -->
   <div class="nav-wrapper">
     <a href="#!" class="brand-logo">A&E</a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
-      <li class="tab"><a routerLink="paginaInicial" href="#test2">Tela Teste</a></li>
-      <li class="tab"><a routerLink="cliente" href="#test1">Cadastrar Cliente</a></li>
-      <li class="tab"><a routerLink="listClientes" href="#test2">Lista de Clientes</a></li>
+      <li class="tab"><a routerLink="cliente" href="#test1">Quem Somos</a></li>
+      <li class="tab"><a routerLink="cliente" href="#test1">FAQ</a></li>
+      <a class="btn waves-effect waves-light" (click)="listClientes" routerLink="listClientes">Fazer Login</a>
+    </ul>
+  </div>
+
+  <!-- Tabs -->
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab"><a routerLink="cliente" class="active" href="#test1">Cadastrar Cliente</a></li>
+      <li class="tab"><a routerLink="listClientes" class="active" href="#test2">Lista de Clientes</a></li>
+      <li class="tab"><a routerLink="ecommerce" class="active" href="#test3">Cadastrar E-commerce</a></li>
+      <li class="tab"><a routerLink="listEcommerce" class="active" href="#test4">Lista de E-commerces</a></li>
     </ul>
   </div>
 </nav>
 
+<!-- Menu Mobile -->
 <ul class="sidenav" id="mobile-demo">
-  <li class="tab"><a routerLink="paginaInicial" href="#3">Tela Teste</a></li>
+  <a class="btn waves-effect waves-light" id="bnt-sidenav" (click)="listClientes" routerLink="listClientes">Fazer Login</a>
   <li class="tab"><a routerLink="cliente" href="#test1">Cadastrar Cliente</a></li>
   <li class="tab"><a routerLink="listClientes" href="#test2">Lista de Clientes</a></li>
+  <li class="tab"><a routerLink="ecommerce" class="active" href="#test3">Cadastrar E-commerce</a></li>
+  <li class="tab"><a routerLink="listEcommerce" class="active" href="#test4">Lista de E-commerces</a></li>
 </ul>
 
 <router-outlet></router-outlet>

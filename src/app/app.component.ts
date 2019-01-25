@@ -12,6 +12,11 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
+    // Seletor do Tabs
+    const el = document.querySelectorAll('.tabs');
+    const instance = M.Tabs.init(el, this.options);
+
+    // Menu Mobile
     const elems = document.querySelectorAll('.sidenav');
     const instances = M.Sidenav.init(elems, this.options);
   }
