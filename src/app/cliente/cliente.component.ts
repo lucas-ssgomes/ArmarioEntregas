@@ -41,7 +41,7 @@ export class ClienteComponent implements OnInit {
   remover(eid: string) {
     this.database.remover('clientes', eid)
       .then(() => {
-        alert('Cliente cadastrado com sucesso');
+        alert('Cliente removido com sucesso');
         this.carregarUsuarios();
       });
   }
