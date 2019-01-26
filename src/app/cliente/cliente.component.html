@@ -5,18 +5,21 @@
     <div class="row">
 
       <div class="input-field col s6">
-        <input [(ngModel)]="novoCliente.nome" #nome="ngModel" id="nome" type="text" class="validate" name="Nome">
-        <label for="nome">Nome</label>
+        <input [(ngModel)]="novoCliente.nome" #nome="ngModel" id="nome" type="text" class="validate" placeholder="João"
+          name="Nome">
+        <label class="active" for="nome">Nome</label>
       </div>
 
       <div class="input-field col s6">
-        <input [(ngModel)]="novoCliente.sobrenome" #sobrenome="ngModel" id="sobrenome" type="text" class="validate" name="Sobrenome">
-        <label for="sobrenome">Sobrenome</label>
+        <input [(ngModel)]="novoCliente.sobrenome" #sobrenome="ngModel" id="sobrenome" type="text" class="validate"
+          placeholder=" da Silva Sauro" name="Sobrenome">
+        <label class="active" for="sobrenome">Sobrenome</label>
       </div>
 
       <div class="input-field col s6">
-        <input [(ngModel)]="novoCliente.email" #email="ngModel" id="email" type="email" class="validate" name="Email">
-        <label for="email">Email</label>
+        <input [(ngModel)]="novoCliente.email" #email="ngModel" id="email" type="email" class="validate" 
+          placeholder="joao@armarioentregas.com" name="Email">
+        <label class="active" for="email">Email</label>
       </div>
 
       <div class="input-field col s6">
@@ -25,8 +28,9 @@
       </div>
 
       <div class="input-field col s6">
-        <input [(ngModel)]="novoCliente.cpf" #cpf="ngModel" id="cpf" type="text" class="validate" name="CPF">
-        <label for="cpf">CPF</label>
+        <input [(ngModel)]="novoCliente.cpf" #cpf="ngModel" id="cpf" type="text" class="validate"
+          placeholder="123.456.789-10" name="CPF">
+        <label class="active" for="cpf">CPF</label>
       </div>
 
       <div class="input-field col s6">
@@ -35,18 +39,19 @@
       </div>
 
       <div class="input-field col s6">
-        <input [(ngModel)]="novoCliente.telefone" #telefone="ngModel" id="telefone" type="text" class="validate" name="Telefone">
-        <label for="telefone">Telefone</label>
+        <input [(ngModel)]="novoCliente.telefone" #telefone="ngModel" id="telefone" type="text" class="validate"
+          placeholder="(01)98888-7777" name="Telefone">
+        <label class="active" for="telefone">Telefone</label>
       </div>
 
       <div>
         <button class="btn right waves-effect waves-lightj" type="submit" name="action" [disabled]="!novoCliente.nome || !novoCliente.sobrenome || !novoCliente.email 
-        || !novoCliente.senha || !novoCliente.cpf || !novoCliente.endereco || !novoCliente.telefone">Cadastrar
+          || !novoCliente.senha || !novoCliente.cpf || !novoCliente.endereco || !novoCliente.telefone">Cadastrar
           <i class="material-icons right">send</i>
         </button>
       </div>
 
     </div>
   </form>
-  
+
 </div>

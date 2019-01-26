@@ -1,5 +1,5 @@
 h4 {
-  color: #23877d;
+  color: #dd2c00;
   text-align: center;
   margin-top: 0px;
   margin-block-end: 35px;
@@ -31,21 +31,21 @@ input {
 
 button {
   background: white;
-  border: 1px solid #23877d;
+  border: 1px solid #dd2c00;
   padding: auto;
-  color: #23877d;
+  color: #dd2c00;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 button:hover {
-  background: #23877d;
+  background: #dd2c00;
   color: white;
   cursor: pointer;
 }
 
 th {
-  background: #23877d;
+  background: #dd2c00;
   color: white;
   border: 10px solid;
 }
@@ -64,7 +64,7 @@ button:disabled {
 
 .edit-parent {
   margin-right: 8px;
-  background-color: #326CA4;
+  background-color: #dd2c00;
 }
 
 table input {

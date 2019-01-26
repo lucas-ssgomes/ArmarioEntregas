@@ -1,5 +1,5 @@
 h5 {
-    color: #23877d;
+    color: #ffb300;
     text-align: left;
     margin-top: 20px;
     margin-block-end: 25px;
@@ -52,7 +52,7 @@ h5 {
   }
   
   th {
-    background: #78909c;
+    background: #ffc107;
     color: white;
     border: 2px solid;
   }

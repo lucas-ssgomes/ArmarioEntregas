@@ -1,5 +1,5 @@
 h4 {
-    color: #23877d;
+    color: #ffb300;
     text-align: center;
     margin-top: 0px;
     margin-block-end: 35px;
@@ -31,21 +31,21 @@ h4 {
   
   button {
     background: white;
-    border: 1px solid #23877d;
+    border: 1px solid #ffb300;
     padding: auto;
-    color: #23877d;
+    color: #ffb300;
     padding-left: 20px;
     padding-right: 20px;
   }
   
   button:hover {
-    background: #23877d;
+    background: #ffb300;
     color: white;
     cursor: pointer;
   }
   
   th {
-    background: #23877d;
+    background: #ffb300;
     color: white;
     border: 10px solid;
   }
