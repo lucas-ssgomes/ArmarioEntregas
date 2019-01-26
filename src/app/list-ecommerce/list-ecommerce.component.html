@@ -24,7 +24,7 @@
             </td>
             <td>
                 <span *ngIf="!ecommerce.editando">{{ecommerce.nomeCompleto}}</span>
-                <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.nomeCompleto" name="sobrenome-{{ecommerce.eid}}"/>
+                <input *ngIf="ecommerce.editando" type="text" [(ngModel)]="ecommerce.nomeCompleto" name="nomeCompleto-{{ecommerce.eid}}"/>
               </td>
               <td>
                 <span *ngIf="!ecommerce.editando">{{ecommerce.email}}</span>
