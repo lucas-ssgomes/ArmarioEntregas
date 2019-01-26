@@ -1,3 +1,74 @@
-<p>
-  list-loja-fisica works!
-</p>
+<div class="content card">
+    <div *ngIf="lojasFisicas">
+      <h5>Lojas Físicas Cadastradas</h5>
+      <table> 
+        <thead>
+          <tr>
+            <th>Nome Fantasia</th>
+            <th>Nome Completo</th>
+            <th>Email</th>
+            <th>Senha</th>
+            <th>CNPJ</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+            <th></th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <tr *ngFor="let lojaFisica of lojasFisicas">
+            <td>
+              <span *ngIf="!lojaFisica.editando">{{lojaFisica.nomeFantasia}}</span>
+              <input *ngIf="lojaFisica.editando" type="text" [(ngModel)]="lojaFisica.nomeFantasia" name="nomeFantasia-{{lojaFisica.eid}}"/>
+            </td>
+            <td>
+                <span *ngIf="!lojaFisica.editando">{{lojaFisica.nomeCompleto}}</span>
+                <input *ngIf="lojaFisica.editando" type="text" [(ngModel)]="lojaFisica.nomeCompleto" name="nomeCompleto-{{lojaFisica.eid}}"/>
+              </td>
+              <td>
+                <span *ngIf="!lojaFisica.editando">{{lojaFisica.email}}</span>
+                <input *ngIf="lojaFisica.editando" type="text" [(ngModel)]="lojaFisica.email" name="email-{{lojaFisica.eid}}"/>
+              </td>
+  
+              <td>
+                <span *ngIf="!lojaFisica.editando">{{lojaFisica.senha}}</span>
+                <input *ngIf="lojaFisica.editando" type="text" [(ngModel)]="lojaFisica.senha" name="senha-{{lojaFisica.eid}}"/>
+              </td>
+  
+              <td>
+                <span *ngIf="!lojaFisica.editando">{{lojaFisica.cnpj}}</span>
+                <input *ngIf="lojaFisica.editando" type="text" [(ngModel)]="lojaFisica.cnpj" name="cnpj-{{lojaFisica.eid}}"/>
+              </td>
+  
+              <td>
+                <span *ngIf="!lojaFisica.editando">{{lojaFisica.endereco}}</span>
+                <input *ngIf="lojaFisica.editando" type="text" [(ngModel)]="lojaFisica.endereco" name="endereco-{{lojaFisica.eid}}"/>
+              </td>
+  
+              <td>
+                <span *ngIf="!lojaFisica.editando">{{lojaFisica.telefone}}</span>
+                <input *ngIf="lojaFisica.editando" type="text" [(ngModel)]="lojaFisica.telefone" name="telefone-{{lojaFisica.eid}}" />
+              </td>
+  
+            <td *ngIf="!lojaFisica.editando" class="remove-parent">
+              <a class="edit-parent" (click)="editar(lojaFisica)" href="javascript:void(0);">
+                <button><i class="material-icons">edit</i></button>
+              </a>
+              <a (click)="remover(lojaFisica.eid)" href="javascript:void(0);">
+                <button><i class="material-icons">delete</i></button>
+              </a>
+            </td>
+            <td *ngIf="lojaFisica.editando" class="remove-parent">
+                <a class="confirm-parent" (click)="confirmEdit(lojaFisica)" href="javascript:void(0);">
+                  <button><i class="material-icons">check</i></button>
+                </a>
+                <a (click)="cancelEdit(lojaFisica)" href="javascript:void(0);">
+                  <button><i class="material-icons">close</i></button>
+                </a>
+              </td>
+  
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>

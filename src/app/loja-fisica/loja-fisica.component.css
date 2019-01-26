@@ -1,0 +1,80 @@
+h4 {
+    color: #3f51b5;
+    text-align: center;
+    margin-top: 0px;
+    margin-block-end: 35px;
+  }
+  
+  .content {
+    width: 50%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+  .input-field {
+    margin-block-end: 17px;
+  }
+  
+  input {
+    width: -webkit-fill-available;
+    padding: 8px;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background: white;
+    border: 1px solid #5c6bc0;
+    padding: auto;
+    color: #5c6bc0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  button:hover {
+    background: #5c6bc0;
+    color: white;
+    cursor: pointer;
+  }
+  
+  th {
+    background: #5c6bc0;
+    color: white;
+    border: 10px solid;
+  }
+  
+  button:disabled {
+    background: #bbb;
+    color: #555;
+    border: none;
+    cursor: not-allowed;
+  }
+  
+  .remove-parent i {
+    text-align: center;
+    color: white;
+  }
+  
+  .edit-parent {
+    margin-right: 8px;
+    background-color: #326CA4;
+  }
+  
+  table input {
+    border: 1px solid;
+    padding-left: 8px;
+    background: white;
+  }
+  
+  .confirm-parent {
+    margin-right: 8px;
+    background: #2EBE48;
+  }
+  

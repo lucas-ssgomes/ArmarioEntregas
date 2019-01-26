@@ -1,3 +1,58 @@
-<p>
-  loja-fisica works!
-</p>
+<div class="content card">
+    <h4>Cadastrar Loja Física</h4>
+  
+    <form (ngSubmit)="cadastrar(formNew)" #formNew="ngForm" class="col s6">
+      <div class="row">
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novaLojaFisica.nomeFantasia" #nomeFantasia="ngModel" id="nomeFantasia" type="text" class="validate"
+            placeholder="Armario Entregas" name="Nome Fantasia">
+          <label class="active" for="nomeFantasia">Nome Fantasia</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novaLojaFisica.nomeCompleto" #nomeCompleto="ngModel" id="nomeCompleto" type="text" class="validate"
+            placeholder="João da Silva Sauro" name="Nome Completo">
+          <label class="active" for="nomeCompleto">Nome Completo</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novaLojaFisica.email" #email="ngModel" id="email" type="email" class="validate" 
+            placeholder="joao@armarioentregas.com" name="Email">
+          <label class="active" for="email">Email</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novaLojaFisica.senha" #senha="ngModel" id="senha" type="password" class="validate" name="Senha">
+          <label for="senha">Senha</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novaLojaFisica.cnpj" #cnpj="ngModel" id="cnpj" type="text" class="validate" name="CNPJ">
+          <label for="cnpj">CNPJ</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novaLojaFisica.endereco" #endereco="ngModel" id="endereco" type="text" class="validate" name="Endereço">
+          <label for="endereco">Endereço</label>
+        </div>
+  
+        <div class="input-field col s6">
+          <input [(ngModel)]="novaLojaFisica.telefone" #telefone="ngModel" id="telefone" type="text" class="validate"
+          placeholder="(01)98888-7777" name="Telefone">
+          <label class="active" for="telefone">Telefone</label>
+        </div>
+  
+        <div>
+          <button class="btn right waves-effect waves-lightj" type="submit" name="action" [disabled]="!novaLojaFisica.nomeFantasia 
+              || !novaLojaFisica.nomeCompleto || !novaLojaFisica.email || !novaLojaFisica.senha || !novaLojaFisica.cnpj
+              || !novaLojaFisica.endereco || !novaLojaFisica.telefone">Cadastrar
+            <i class="material-icons right">send</i>
+          </button>
+        </div>
+  
+      </div>
+    </form>
+  
+  </div>
+  
