@@ -14,6 +14,8 @@ import { ClienteComponent } from './cliente/cliente.component';
 import { ListClientesComponent } from './list-clientes/list-clientes.component';
 import { EcommerceComponent } from './ecommerce/ecommerce.component';
 import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.component';
+import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
+import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.componen
     ClienteComponent,
     ListClientesComponent,
     EcommerceComponent,
-    ListEcommerceComponent
+    ListEcommerceComponent,
+    LojaFisicaComponent,
+    ListLojaFisicaComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,9 @@ import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.componen
       { path: 'cliente', component: ClienteComponent },
       { path: 'listClientes', component: ListClientesComponent },
       { path: 'ecommerce', component: EcommerceComponent },
-      {path: 'listEcommerce', component: ListEcommerceComponent},
+      { path: 'listEcommerce', component: ListEcommerceComponent},
+      { path: 'lojaFisica', component: LojaFisicaComponent},
+      { path: 'listLojaFisica', component: ListLojaFisicaComponent},
     ])
   ],
   providers: [DbService, AngularFireDatabase],

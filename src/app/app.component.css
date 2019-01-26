@@ -6,6 +6,10 @@
     text-transform: none;
   }
 
+  .tab {
+    text-transform: none;
+  }
+
   #bnt-sidenav {
     margin-top: 7%;
     margin-left: 10%;
