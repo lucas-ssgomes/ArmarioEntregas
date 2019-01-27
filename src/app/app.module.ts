@@ -15,17 +15,19 @@ import { EcommerceComponent } from './ecommerce/ecommerce.component';
 import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.component';
 import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
 import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     ClienteComponent,
     ListClientesComponent,
     EcommerceComponent,
     ListEcommerceComponent,
     LojaFisicaComponent,
-    ListLojaFisicaComponent
+    ListLojaFisicaComponent,
   ],
   imports: [
     BrowserModule,
