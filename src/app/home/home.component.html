@@ -1,31 +1,56 @@
 <nav class="nav-extended cyan darken-2">
 
-    <!-- NavBar Principal -->
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">A&E</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li class="tab"><a routerLink="cliente" href="#test1">Quem Somos?</a></li>
-        <li class="tab"><a routerLink="cliente" href="#test1">FAQ</a></li>
-        <a class="btn waves-effect waves-light" (click)="listClientes" routerLink="listClientes">Fazer Login</a>
-      </ul>
+  <!-- NavBar Principal -->
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">A&E</a>
+    <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li class="tab"><a routerLink="cliente" href="#test1">Quem Somos?</a></li>
+      <li class="tab"><a routerLink="cliente" href="#test1">FAQ</a></li>
+      <a class="btn waves-effect waves-light" (click)="login" routerLink="login">Fazer Login</a>
+    </ul>
+  </div>
+
+  <!-- Tabs -->
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab"><a routerLink="cliente" class="active">Cadastrar Cliente</a></li>
+      <li class="tab"><a routerLink="listClientes" class="active">Lista de Clientes</a></li>
+      <li class="tab"><a routerLink="ecommerce" class="active">Cadastrar E-commerce</a></li>
+      <li class="tab"><a routerLink="listEcommerce" class="active">Lista de E-commerces</a></li>
+      <li class="tab"><a routerLink="lojaFisica" class="active">Cadastrar Loja Física</a></li>
+      <li class="tab"><a routerLink="listLojaFisica" class="active">Lista de Lojas Fisicas</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Carousel de Fixed com Button -->
+<div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">Seja um Armário</a>
     </div>
-  
-    <!-- Tabs -->
-    <div class="nav-content">
-      <ul class="tabs tabs-transparent">
-        <li class="tab"><a routerLink="cliente" class="active">Cadastrar Cliente</a></li>
-        <li class="tab"><a routerLink="listClientes" class="active">Lista de Clientes</a></li>
-        <li class="tab"><a routerLink="ecommerce" class="active">Cadastrar E-commerce</a></li>
-        <li class="tab"><a routerLink="listEcommerce" class="active">Lista de E-commerces</a></li>
-        <li class="tab"><a routerLink="lojaFisica" class="active">Cadastrar Loja Física</a></li>
-        <li class="tab"><a routerLink="listLojaFisica" class="active">Lista de Lojas Fisicas</a></li>
-      </ul>
+    <div class="carousel-item red white-text" href="#one!">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p>
     </div>
-  </nav>
-  
-  <!-- Menu Mobile -->
-  <ul class="sidenav" id="mobile-demo">
-    <a class="btn waves-effect waves-light" id="bnt-sidenav" (click)="listClientes" routerLink="listClientes">Fazer Login</a>
-  </ul>
-  
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
+  </div>
+
+<!-- Menu Mobile -->
+<ul class="sidenav" id="mobile-demo">
+  <a href="#!" class="brand-logo">A&E</a>
+  <li class="tab"><a class="btn waves-effect waves-light" id="bnt-sidenav" (click)="login" routerLink="login">Fazer Login</a></li>
+  <li class="tab"><a routerLink="cliente" href="#test1">Quem Somos?</a></li>
+  <li class="tab"><a routerLink="cliente" href="#test1">FAQ</a></li>
+</ul>

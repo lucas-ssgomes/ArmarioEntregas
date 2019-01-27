@@ -16,6 +16,7 @@ import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.componen
 import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
 import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { HomeComponent } from './home/home.component';
     ListEcommerceComponent,
     LojaFisicaComponent,
     ListLojaFisicaComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

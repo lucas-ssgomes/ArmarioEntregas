@@ -8,6 +8,7 @@ import { EcommerceComponent } from './ecommerce/ecommerce.component';
 import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.component';
 import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
 import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'listEcommerce', component: ListEcommerceComponent},
   { path: 'lojaFisica', component: LojaFisicaComponent},
   { path: 'listLojaFisica', component: ListLojaFisicaComponent},
+  { path: 'login', component: LoginComponent},
 ];
 
 @NgModule({

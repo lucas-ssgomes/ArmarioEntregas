@@ -1,3 +1,4 @@
+import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 import * as M from '../../assets/materialize/js/materialize.min.js';
 
@@ -20,5 +21,9 @@ export class HomeComponent implements OnInit {
     // Menu Mobile
     const elems = document.querySelectorAll('.sidenav');
     const instances = M.Sidenav.init(elems, this.options);
+
+    // Carousel
+    const element2 = document.querySelectorAll('.carousel');
+    const instance2 = M.Carousel.init(element2, this.options);
   }
 }
