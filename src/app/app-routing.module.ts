@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from './guards/auth.guard';
+
 import { HomeComponent } from './home/home.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { ListClientesComponent } from './list-clientes/list-clientes.component';
@@ -10,6 +12,7 @@ import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
 import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
 import { LoginComponent } from './login/login.component';
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cliente', component: ClienteComponent },
@@ -18,7 +21,13 @@ const routes: Routes = [
   { path: 'listEcommerce', component: ListEcommerceComponent},
   { path: 'lojaFisica', component: LojaFisicaComponent},
   { path: 'listLojaFisica', component: ListLojaFisicaComponent},
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
+];
+
+const loginRoutes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+  { path: 'register'}
 ];
 
 @NgModule({
