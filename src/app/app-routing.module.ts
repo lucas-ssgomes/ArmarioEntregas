@@ -14,21 +14,21 @@ import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent},
   { path: 'cliente', component: ClienteComponent },
   { path: 'listClientes', component: ListClientesComponent },
   { path: 'ecommerce', component: EcommerceComponent },
   { path: 'listEcommerce', component: ListEcommerceComponent},
   { path: 'lojaFisica', component: LojaFisicaComponent},
   { path: 'listLojaFisica', component: ListLojaFisicaComponent},
-  { path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
+  { path: 'login', component: LoginComponent},
 ];
 
-const loginRoutes: Routes = [
+/*const loginRoutes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
   { path: 'register'}
-];
+];*/
 
 @NgModule({
   declarations: [],
