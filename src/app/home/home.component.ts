@@ -12,6 +12,11 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   options = {};
+  options2 = {
+    fullWidth: true,
+    indicators: true,
+    duration: 100,
+  };
 
   ngOnInit(): void {
     // Seletor do Tabs
@@ -24,6 +29,6 @@ export class HomeComponent implements OnInit {
 
     // Carousel
     const element2 = document.querySelectorAll('.carousel');
-    const instance2 = M.Carousel.init(element2, this.options);
+    const instance2 = M.Carousel.init(element2, this.options2);
   }
 }
