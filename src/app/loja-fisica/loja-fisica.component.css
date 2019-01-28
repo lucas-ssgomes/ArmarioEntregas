@@ -30,10 +30,9 @@ h4 {
   }
   
   button {
-    background: white;
+    background: #5c6bc0;
     border: 1px solid #5c6bc0;
     padding: auto;
-    color: #5c6bc0;
     padding-left: 20px;
     padding-right: 20px;
   }

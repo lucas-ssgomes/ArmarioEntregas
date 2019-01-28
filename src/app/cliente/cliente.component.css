@@ -1,3 +1,7 @@
+.brand-logo {
+  margin-left: 30px;
+}
+
 h4 {
   color: #dd2c00;
   text-align: center;
@@ -8,32 +12,24 @@ h4 {
 .content {
   width: 50%;
   background: white;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-}
-
-.input-field {
+.input {
+  width: 50%;
+  font-size: 15px;
+  margin-bottom: 20px;
   margin-block-end: 17px;
 }
 
-input {
-  width: -webkit-fill-available;
-  padding: 8px;
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-
 button {
-  background: white;
+  background: #dd2c00;
+  text-transform: none;
   border: 1px solid #dd2c00;
   padding: auto;
-  color: #dd2c00;
   padding-left: 20px;
   padding-right: 20px;
 }
