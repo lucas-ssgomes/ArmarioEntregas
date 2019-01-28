@@ -13,7 +13,6 @@ import { EcommerceComponent } from './ecommerce/ecommerce.component';
 import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.component';
 import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
 import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
-import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 import { MenuEcommerceComponent } from './menu-ecommerce/menu-ecommerce.component';
 import { MenuLojaFisicaComponent } from './menu-loja-fisica/menu-loja-fisica.component';
 
@@ -29,7 +28,6 @@ const routes: Routes = [
   { path: 'listEcommerce', component: ListEcommerceComponent},
   { path: 'lojaFisica', component: LojaFisicaComponent},
   { path: 'listLojaFisica', component: ListLojaFisicaComponent},
-  { path: 'menuCliente', component: MenuClienteComponent},
   { path: 'menuEcommerce', component: MenuEcommerceComponent},
   { path: 'menuLojaFisica', component: MenuLojaFisicaComponent},
 ];

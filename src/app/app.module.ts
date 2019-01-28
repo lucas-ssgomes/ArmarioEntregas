@@ -25,7 +25,7 @@ import { MenuEcommerceComponent } from './menu-ecommerce/menu-ecommerce.componen
 import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
 import { LoginEcommerceComponent } from './login-ecommerce/login-ecommerce.component';
 import { LoginLojaFisicaComponent } from './login-loja-fisica/login-loja-fisica.component';
-
+import { MenuClienteModule } from './menu-cliente/menu-cliente.module';
 
 
 @NgModule({
@@ -41,13 +41,13 @@ import { LoginLojaFisicaComponent } from './login-loja-fisica/login-loja-fisica.
     LoginComponent,
     MenuLojaFisicaComponent,
     MenuEcommerceComponent,
-    MenuClienteComponent,
     LoginEcommerceComponent,
     LoginLojaFisicaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MenuClienteModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
