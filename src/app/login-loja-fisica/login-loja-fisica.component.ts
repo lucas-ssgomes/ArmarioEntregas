@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as M from '../../assets/materialize/js/materialize.min.js';
 
 @Component({
   selector: 'app-login-loja-fisica',
@@ -9,7 +10,14 @@ export class LoginLojaFisicaComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  options = {
+    coverTrigger: false
+   };
+
+  ngOnInit(): void {
+    // Dropdown
+    const elems2 = document.querySelectorAll('.dropdown-trigger');
+    const instances2 = M.Dropdown.init(elems2, this.options);
   }
 
 }

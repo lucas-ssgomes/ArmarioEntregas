@@ -1,3 +1,44 @@
-<p>
-  login-loja-fisica works!
-</p>
+<!-- NavBar Principal -->
+<nav class="nav-extended cyan darken-2">
+    <div class="nav-wrapper">
+      <a href='' class="brand-logo">A&E</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  
+  <!-- Login -->
+  <div class="content card col s6">
+    <h4>Fazer Login</h4>
+  
+    <!-- Dropdown Trigger -->
+    <a class='dropdown-trigger btn center' href='#' data-target='dropdown1'>Mudar Usuário<i class="material-icons">arrow_drop_down</i></a>
+  
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+      <li><a routerLink="../loginLojaFisica">Loja Física</a></li>
+      <li class="divider" tabindex="-1"></li>
+      <li><a routerLink="../login" class="active">Cliente</a></li>
+      <li><a routerLink="../loginEcommerce">E-commerce</a></li>
+    </ul>
+  
+    <!-- Continuação Login -->
+    <form (ngSubmit)="OnLogin(formNew)" #formNew="ngForm" class="col s6 center">
+      <div class="row">
+  
+        <div class="input-field container">
+          <input id="email" type="email" class="validate" placeholder="joao@armarioentregas.com" name="Email">
+          <label class="active" for="email">Email</label>
+        </div>
+  
+        <div class="input-field container">
+          <input id="senha" type="password" class="validate" name="Senha">
+          <label for="senha">Senha</label>
+        </div>
+  
+        <button class="btn waves-effect waves-light" type="submit" name="action">
+          Entrar</button>
+  
+      </div>
+    </form>
+  </div>
+  
