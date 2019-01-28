@@ -6,11 +6,15 @@ import { MenuLojaFisicaComponent } from './menu-loja-fisica.component';
 import { GuardarPedidoComponent } from './guardar-pedido/guardar-pedido.component';
 import { RetirarPedidoComponent } from './retirar-pedido/retirar-pedido.component';
 import { StatusPedidosComponent } from './status-pedidos/status-pedidos.component';
+import { AuthLojaFisicaGuard } from '../guards/auth-loja-fisica.guard';
 
 const menuLojaFisicaRoutes = [
-  { path: 'menuLojaFisica', component: MenuLojaFisicaComponent, children: [
+  { path: 'menuLojaFisica', component: MenuLojaFisicaComponent, canActivate: [AuthLojaFisicaGuard], children: [
+    // Children Login Loja Fisica
     { path: 'guardarPedido', component: GuardarPedidoComponent},
+    // Children Login Loja Fisica
     { path: 'retirarPedido', component: RetirarPedidoComponent},
+    // Children Login Loja Fisica
     { path: 'statusPedidos', component: StatusPedidosComponent}
   ]}
 ];

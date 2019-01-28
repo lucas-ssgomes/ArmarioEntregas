@@ -13,8 +13,6 @@ import { EcommerceComponent } from './ecommerce/ecommerce.component';
 import { ListEcommerceComponent } from './list-ecommerce/list-ecommerce.component';
 import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
 import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
-import { MenuEcommerceComponent } from './menu-ecommerce/menu-ecommerce.component';
-import { MenuLojaFisicaComponent } from './menu-loja-fisica/menu-loja-fisica.component';
 
 
 const routes: Routes = [
@@ -22,14 +20,16 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'loginEcommerce', component: LoginEcommerceComponent},
   { path: 'loginLojaFisica', component: LoginLojaFisicaComponent},
-  { path: 'cliente', component: ClienteComponent },
+  { path: 'cliente', component: ClienteComponent},
+  { path: 'ecommerce', component: EcommerceComponent},
+  // Adm
   { path: 'listClientes', component: ListClientesComponent },
-  { path: 'ecommerce', component: EcommerceComponent },
+  // Adm
   { path: 'listEcommerce', component: ListEcommerceComponent},
+  // Adm
   { path: 'lojaFisica', component: LojaFisicaComponent},
+  // Adm
   { path: 'listLojaFisica', component: ListLojaFisicaComponent},
-  { path: 'menuEcommerce', component: MenuEcommerceComponent},
-  { path: 'menuLojaFisica', component: MenuLojaFisicaComponent},
 ];
 
 @NgModule({
