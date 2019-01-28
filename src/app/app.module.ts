@@ -20,6 +20,11 @@ import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
 import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MenuLojaFisicaComponent } from './menu-loja-fisica/menu-loja-fisica.component';
+import { MenuEcommerceComponent } from './menu-ecommerce/menu-ecommerce.component';
+import { MenuClienteComponent } from './menu-cliente/menu-cliente.component';
+import { LoginEcommerceComponent } from './login-ecommerce/login-ecommerce.component';
+import { LoginLojaFisicaComponent } from './login-loja-fisica/login-loja-fisica.component';
 
 
 
@@ -34,6 +39,11 @@ import { LoginComponent } from './login/login.component';
     LojaFisicaComponent,
     ListLojaFisicaComponent,
     LoginComponent,
+    MenuLojaFisicaComponent,
+    MenuEcommerceComponent,
+    MenuClienteComponent,
+    LoginEcommerceComponent,
+    LoginLojaFisicaComponent,
   ],
   imports: [
     BrowserModule,
