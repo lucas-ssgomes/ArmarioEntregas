@@ -1,4 +1,3 @@
-import { element } from 'protractor';
 import { Component, OnInit } from '@angular/core';
 import * as M from '../../assets/materialize/js/materialize.min.js';
 

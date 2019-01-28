@@ -1,7 +1,7 @@
 <!-- NavBar Principal -->
 <nav class="nav-extended cyan darken-2">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">A&E</a>
+    <a href='' class="brand-logo">A&E</a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li class="tab"><a routerLink="cliente" href="#test1">Quem Somos?</a></li>
@@ -14,6 +14,17 @@
 <div class="content card col s6">
   <h4>Fazer Login</h4>
 
+  <!-- Dropdown Trigger -->
+  <a class='dropdown-trigger btn center' href='#' data-target='dropdown1'>Mudar Usuário<i class="material-icons">arrow_drop_down</i></a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a routerLink="../login" class="active">Cliente</a></li>
+    <li><a routerLink="../loginEcommerce">Loja Virtual</a></li>
+    <li><a routerLink="../loginLojaFisica">Loja Física</a></li>
+  </ul>
+
+  <!-- Continuação Login -->
   <form (ngSubmit)="OnLogin(formNew)" #formNew="ngForm" class="col s6 center">
     <div class="row">
 
@@ -37,13 +48,11 @@
 
     </div>
   </form>
-
 </div>
-
 
 <!-- Menu Mobile -->
 <ul class="sidenav" id="mobile-demo">
-  <a href="#!" class="brand-logo">A&E</a>
+  <a href='' class="brand-logo">A&E</a>
   <li class="tab"><a routerLink="cliente" href="#test1">Quem Somos?</a></li>
   <li class="tab"><a routerLink="cliente" href="#test1">FAQ</a></li>
 </ul>

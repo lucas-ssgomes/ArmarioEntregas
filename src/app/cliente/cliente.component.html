@@ -1,18 +1,19 @@
 <!-- NavBar Principal -->
 <nav class="nav-extended cyan darken-2">
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">A&E</a>
+    <a href='' class="brand-logo">A&E</a>
     <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li class="tab"><a routerLink='' href="#test1">Cliente</a></li>
       <li class="tab"><a routerLink='' href="#test1">E-commerce</a></li>
       <li class="tab"><a routerLink='' href="#test1">Loja Física</a></li>
       <li class="tab"><a routerLink='' href="#test1">Quem Somos?</a></li>
-      <a class="btn waves-effect waves-light" (click)="login" routerLink="login">Fazer Login</a>
+      <a class="btn waves-effect waves-light" routerLink="../login">Fazer Login</a>
     </ul>
   </div>
 </nav>
 
+<!-- Criar Conta -->
 <div class="content card">
   <h4>Criar Conta</h4>
 
@@ -68,5 +69,14 @@
 
     </div>
   </form>
-
 </div>
+
+<!-- Menu Mobile -->
+<ul class="sidenav" id="mobile-demo">
+    <li class="tab"><a class="btn waves-effect waves-light" id="bnt-sidenav" routerLink="../login">Fazer
+        Login</a></li>
+    <li class="tab"><a routerLink='' href="#test1">Cliente</a></li>
+    <li class="tab"><a routerLink='' href="#test1">E-commerce</a></li>
+    <li class="tab"><a routerLink='' href="#test1">Loja Física</a></li>
+    <li class="tab"><a routerLink='' href="#test1">Quem Somos?</a></li>
+</ul>

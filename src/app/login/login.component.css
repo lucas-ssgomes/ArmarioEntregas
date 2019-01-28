@@ -6,13 +6,13 @@
     color: #0097a7;
     text-align: center;
     margin-top: 10px;
-    margin-block-end: 35px;
+    margin-block-end: 25px;
   }
 
   .content {
     width: 50%;
     background: white;
-    margin-top: 70px;
+    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
@@ -33,6 +33,14 @@
     margin-right: 100px;
     margin-top: 10px;
     margin-block-end: 10px;
+  }
+
+  .dropdown-trigger {
+    margin-left: 235px;
+    margin-right: 225px;
+    margin-block-end: 10px;
+    text-transform: none;
+    background-color: #0097a7;
   }
 
   #aindaNTemConta {

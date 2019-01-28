@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from '../models/cliente';
 import { DbService } from '../servicos/db.service';
+import * as M from '../../assets/materialize/js/materialize.min.js';
 
 @Component({
   selector: 'app-cliente',
@@ -12,13 +13,18 @@ export class ClienteComponent implements OnInit {
   novoCliente: Cliente;
   clientes: Cliente[];
   carregando: boolean;
+  options = {};
 
   constructor(private database: DbService) {
     this.novoCliente = new Cliente();
     this.carregarUsuarios();
   }
 
-  ngOnInit() { }
+  ngOnInit(): void {
+    // Menu Mobile
+    const elems = document.querySelectorAll('.sidenav');
+    const instances = M.Sidenav.init(elems, this.options);
+  }
 
   private carregarUsuarios() {
     this.carregando = true;

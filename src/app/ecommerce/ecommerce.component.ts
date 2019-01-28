@@ -1,6 +1,7 @@
 import { Ecommerce } from './../models/ecommerce';
 import { Component, OnInit } from '@angular/core';
 import { DbService } from '../servicos/db.service';
+import * as M from '../../assets/materialize/js/materialize.min.js';
 
 @Component({
   selector: 'app-ecommerce',
@@ -12,13 +13,18 @@ export class EcommerceComponent implements OnInit {
   novoEcommerce: Ecommerce;
   ecommerces: Ecommerce[];
   carregando: boolean;
+  options = {};
 
   constructor(private database: DbService) {
     this.novoEcommerce = new Ecommerce();
     this.carregarUsuarios();
    }
 
-  ngOnInit() { }
+  ngOnInit(): void {
+    // Menu Mobile
+    const elems = document.querySelectorAll('.sidenav');
+    const instances = M.Sidenav.init(elems, this.options);
+   }
 
   private carregarUsuarios() {
     this.carregando = true;

@@ -11,14 +11,17 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   options = {
-    duration: 100,
-    fullWidth: true
-  };
+    coverTrigger: false
+   };
 
   ngOnInit(): void {
     // Menu Mobile
     const elems = document.querySelectorAll('.sidenav');
     const instances = M.Sidenav.init(elems, this.options);
+
+    // Dropdown
+    const elems2 = document.querySelectorAll('.dropdown-trigger');
+    const instances2 = M.Dropdown.init(elems2, this.options);
   }
 
 }
