@@ -1,3 +1,25 @@
-<p>
-  menu-cliente works!
-</p>
+<!-- NavBar Principal -->
+<nav class="nav-extended deep-orange darken-4">
+    <div class="nav-wrapper">
+      <a routerLink='../menuCliente' class="brand-logo">A&E</a>
+      <a routerLink='../menuCliente' data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li class="tab"><a routerLink=''>Cliente</a></li>
+        <a class="btn waves-effect waves-light brown darken-4" routerLink=''><i class="material-icons">exit_to_app</i>Sair</a>
+      </ul>
+    </div>
+  
+    <!-- Tabs -->
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a routerLink="../listClientes" class="active">Lista de Clientes</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Menu Mobile -->
+<ul class="sidenav" id="mobile-demo">
+    <li class="tab"><a class="btn waves-effect waves-light brown darken-4" id="bnt-sidenav" routerLink=''>
+      <i class="material-icons">exit_to_app</i>Sair</a></li>
+    <li class="tab"><a routerLink="../listClientes" class="active">Lista de Clientes</a></li>
+  </ul>
