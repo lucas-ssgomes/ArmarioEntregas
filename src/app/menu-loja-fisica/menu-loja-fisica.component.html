@@ -1,3 +1,30 @@
-<p>
-  menu-loja-fisica works!
-</p>
+<!-- NavBar Principal -->
+<nav class="nav-extended indigo lighten-1">
+    <div class="nav-wrapper">
+      <a routerLink='' class="brand-logo">A&E</a>
+      <a routerLink='' data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <a class="btn waves-effect waves-light blue darken-4" routerLink=''><i class="material-icons">exit_to_app</i>Sair</a>
+      </ul>
+    </div>
+  
+    <!-- Tabs -->
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a routerLink="guardarPedido" class="active">Guardar Pedido</a></li>
+        <li class="tab"><a routerLink="retirarPedido" class="active">Retirar Pedido</a></li>
+        <li class="tab"><a routerLink="statusPedidos" class="active">Status Pedido</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Menu Mobile -->
+  <ul class="sidenav" id="mobile-demo">
+      <li class="tab"><a routerLink="guardarPedido" class="active">Guardar Pedido</a></li>
+      <li class="tab"><a routerLink="retirarPedido" class="active">Retirar Pedido</a></li>
+      <li class="tab"><a routerLink="statusPedidos" class="active">Status Pedido</a></li>
+    <li class="tab"><a class="btn waves-effect waves-light blue darken-4" id="bnt-sidenav" routerLink=''>
+      <i class="material-icons">exit_to_app</i>Sair</a></li>
+  </ul>
+
+<router-outlet></router-outlet>

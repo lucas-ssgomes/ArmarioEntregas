@@ -20,11 +20,11 @@ import { LojaFisicaComponent } from './loja-fisica/loja-fisica.component';
 import { ListLojaFisicaComponent } from './list-loja-fisica/list-loja-fisica.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { MenuLojaFisicaComponent } from './menu-loja-fisica/menu-loja-fisica.component';
 import { LoginEcommerceComponent } from './login-ecommerce/login-ecommerce.component';
 import { LoginLojaFisicaComponent } from './login-loja-fisica/login-loja-fisica.component';
 import { MenuClienteModule } from './menu-cliente/menu-cliente.module';
 import { MenuEcommerceModule } from './menu-ecommerce/menu-ecommerce.module';
+import { MenuLojaFisicaModule } from './menu-loja-fisica/menu-loja-fisica.module';
 
 
 @NgModule({
@@ -38,7 +38,6 @@ import { MenuEcommerceModule } from './menu-ecommerce/menu-ecommerce.module';
     LojaFisicaComponent,
     ListLojaFisicaComponent,
     LoginComponent,
-    MenuLojaFisicaComponent,
     LoginEcommerceComponent,
     LoginLojaFisicaComponent,
   ],
@@ -47,6 +46,7 @@ import { MenuEcommerceModule } from './menu-ecommerce/menu-ecommerce.module';
     AppRoutingModule,
     MenuClienteModule,
     MenuEcommerceModule,
+    MenuLojaFisicaModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
