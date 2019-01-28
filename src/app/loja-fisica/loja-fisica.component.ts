@@ -1,7 +1,6 @@
 import { LojaFisica } from './../models/lojaFisica';
 import { Component, OnInit } from '@angular/core';
 import { DbService } from '../servicos/db.service';
-import { Ecommerce } from '../models/ecommerce';
 
 @Component({
   selector: 'app-loja-fisica',
