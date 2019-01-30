@@ -1,5 +1,8 @@
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit } from '@angular/core';
 import * as M from '../../assets/materialize/js/materialize.min.js';
+import { auth } from 'firebase/app';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +11,7 @@ import * as M from '../../assets/materialize/js/materialize.min.js';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(public afAuth: AngularFireAuth, private router: Router) { }
 
   options = {
     coverTrigger: false
@@ -24,4 +27,12 @@ export class LoginComponent implements OnInit {
     const instances2 = M.Dropdown.init(elems2, this.options);
   }
 
+  onLoginGoogle() {
+    this.afAuth.auth.signInWithPopup( new auth.GoogleAuthProvider());
+    this.router.navigate(['menuCliente']);
+  }
+
+  onLogout() {
+    this.afAuth.auth.signOut();
+  }
 }

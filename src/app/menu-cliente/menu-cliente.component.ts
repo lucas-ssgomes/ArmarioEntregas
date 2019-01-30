@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Component, OnInit } from '@angular/core';
 import * as M from '../../assets/materialize/js/materialize.min.js';
 
@@ -8,7 +10,7 @@ import * as M from '../../assets/materialize/js/materialize.min.js';
 })
 export class MenuClienteComponent implements OnInit {
 
-  constructor() { }
+  constructor(public afAuth: AngularFireAuth, private router: Router) { }
 
   options = {};
 
@@ -20,6 +22,11 @@ export class MenuClienteComponent implements OnInit {
     // Menu Mobile
     const elems = document.querySelectorAll('.sidenav');
     const instances = M.Sidenav.init(elems, this.options);
+  }
+
+  logOut() {
+    this.afAuth.auth.signOut();
+    this.router.navigate(['']);
   }
 
 }

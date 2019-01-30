@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { DbService } from './servicos/db.service';
 import { AuthService } from './servicos/auth.service';
@@ -53,7 +53,6 @@ import { MenuLojaFisicaModule } from './menu-loja-fisica/menu-loja-fisica.module
     MenuLojaFisicaModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
   ],
   providers: [
     DbService,
@@ -64,6 +63,7 @@ import { MenuLojaFisicaModule } from './menu-loja-fisica/menu-loja-fisica.module
     AuthEcommerceGuard,
     AuthLojaFisicaGuard,
     AngularFireDatabase,
+    AngularFireAuth,
   ],
   bootstrap: [AppComponent]
 })
