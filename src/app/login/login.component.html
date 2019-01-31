@@ -21,26 +21,26 @@
   </ul>
 
   <!-- Continuação Login -->
-  <form (ngSubmit)="OnLogin(formNew)" #formNew="ngForm" class="col s6 center">
+  <form (ngSubmit)="onLogin(formNew)" #formNew="ngForm" class="col s6 center">
     <div class="row">
 
       <div class="input-field container">
-        <input id="email" type="email" class="validate" placeholder="joao@armarioentregas.com" name="Email">
+        <input id="email" [(ngModel)]="email" type="email" class="validate" placeholder="joao@armarioentregas.com" name="Email">
         <label class="active" for="email">Email</label>
       </div>
 
       <div class="input-field container">
-        <input id="senha" type="password" class="validate" name="Senha">
+        <input id="senha" [(ngModel)]="senha" type="password" class="validate" name="Senha">
         <label for="senha">Senha</label>
       </div>
 
       <button class="btn waves-effect waves-light" type="submit" name="action">
         Entrar</button>
 
-      <button class="btn waves-effect waves-light red" (click)="onLoginGoogle()" name="action">
-        Entrar com o Google</button>
+      <!--button class="btn waves-effect waves-light red" (click)="onLoginGoogle()" name="action">
+        Entrar com o Google</button-->
 
-      <div id="aindaNTemConta">Ainda não tem uma Conta?<a href="../cliente/" > Clique Aqui</a></div>
+      <div id="aindaNTemConta">Ainda não tem uma Conta?<a href="../cliente/"> Clique Aqui</a></div>
 
     </div>
   </form>

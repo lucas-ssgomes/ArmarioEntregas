@@ -1,21 +1,29 @@
-import { Router } from '@angular/router';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { Component, OnInit } from '@angular/core';
 import * as M from '../../assets/materialize/js/materialize.min.js';
-import { auth } from 'firebase/app';
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
+import { AuthService } from './../servicos/auth.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
+  providers: [AuthService]
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public afAuth: AngularFireAuth, private router: Router) { }
+  // clientes: Cliente[];
+  // carregando: boolean;
+
+  public email: string;
+  public senha: string;
+
+  constructor(public authService: AuthService, private router: Router) {
+  }
 
   options = {
     coverTrigger: false
-   };
+  };
 
   ngOnInit(): void {
     // Menu Mobile
@@ -27,12 +35,25 @@ export class LoginComponent implements OnInit {
     const instances2 = M.Dropdown.init(elems2, this.options);
   }
 
-  onLoginGoogle() {
-    this.afAuth.auth.signInWithPopup( new auth.GoogleAuthProvider());
-    this.router.navigate(['menuCliente']);
+  onLogin(): void {
+    console.log('email', this.email);
+    console.log('senha', this.senha);
+    this.authService.loginEmail(this.email, this.senha)
+      .then((res) => {
+        this.router.navigate(['menuCliente']);
+      }).catch(err => console.log('err', err.message));
+  }
+
+  onLoginGoogle(): void {
+    this.authService.loginGoogle()
+      .then((res) => {
+        console.log('resUser, res');
+        this.router.navigate(['menuCliente']);
+      }).catch(err => console.log('err', err.message));
   }
 
   onLogout() {
-    this.afAuth.auth.signOut();
+    this.authService.logOut();
+    this.router.navigate(['']);
   }
 }

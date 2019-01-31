@@ -1,48 +1,47 @@
 <!-- NavBar Principal -->
 <nav class="nav-extended cyan darken-2">
-    <div class="nav-wrapper">
-      <a href='' class="brand-logo">A&E</a>
-    </div>
-  </nav>
-  
-  <!-- Login -->
-  <div class="content card col s6">
-    <h4>Login E-commerce</h4>
-  
-    <!-- Dropdown Trigger -->
-    <a class='dropdown-trigger btn center' href='#' data-target='dropdown1'>Mudar Usuário<i class="material-icons">arrow_drop_down</i></a>
-  
-    <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li><a routerLink="../loginEcommerce" class="active">E-commerce</a></li>
-      <li class="divider" tabindex="-1"></li>
-      <li><a routerLink="../login">Cliente</a></li>
-      <li><a routerLink="../loginLojaFisica">Loja Física</a></li>
-    </ul>
-  
-    <!-- Continuação Login -->
-    <form (ngSubmit)="OnLogin(formNew)" #formNew="ngForm" class="col s6 center">
-      <div class="row">
-  
-        <div class="input-field container">
-          <input id="email" type="email" class="validate" placeholder="joao@armarioentregas.com" name="Email">
-          <label class="active" for="email">Email</label>
-        </div>
-  
-        <div class="input-field container">
-          <input id="senha" type="password" class="validate" name="Senha">
-          <label for="senha">Senha</label>
-        </div>
-  
-        <button class="btn waves-effect waves-light amber darken-1" type="submit" name="action">
-          Entrar</button>
-  
-        <button class="btn waves-effect waves-light red" type="submit" name="action">
-          Entrar com o Google</button>
-  
-        <div id="aindaNTemConta">Ainda não tem uma Conta?<a href="../ecommerce" > Clique Aqui</a></div>
-  
-      </div>
-    </form>
+  <div class="nav-wrapper">
+    <a href='' class="brand-logo">A&E</a>
   </div>
-  
+</nav>
+
+<!-- Login -->
+<div class="content card col s6">
+  <h4>Login E-commerce</h4>
+
+  <!-- Dropdown Trigger -->
+  <a class='dropdown-trigger btn center' href='#' data-target='dropdown1'>Mudar Usuário<i class="material-icons">arrow_drop_down</i></a>
+
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+    <li><a routerLink="../loginEcommerce" class="active">E-commerce</a></li>
+    <li class="divider" tabindex="-1"></li>
+    <li><a routerLink="../login">Cliente</a></li>
+    <li><a routerLink="../loginLojaFisica">Loja Física</a></li>
+  </ul>
+
+  <!-- Continuação Login -->
+  <form (ngSubmit)="onLogin(formNew)" #formNew="ngForm" class="col s6 center">
+    <div class="row">
+
+      <div class="input-field container">
+        <input id="email" [(ngModel)]="email" type="email" class="validate" placeholder="joao@armarioentregas.com" name="Email">
+        <label class="active" for="email">Email</label>
+      </div>
+
+      <div class="input-field container">
+        <input id="senha" [(ngModel)]="senha" type="password" class="validate" name="Senha">
+        <label for="senha">Senha</label>
+      </div>
+
+      <button class="btn waves-effect waves-light amber darken-1" type="submit" name="action">
+        Entrar</button>
+
+      <!--button class="btn waves-effect waves-light red" type="submit" name="action">
+          Entrar com o Google</button-->
+
+      <div id="aindaNTemConta">Ainda não tem uma Conta?<a href="../ecommerce"> Clique Aqui</a></div>
+
+    </div>
+  </form>
+</div>

@@ -1,16 +1,19 @@
-import { Router } from '@angular/router';
-import { AngularFireAuth } from '@angular/fire/auth';
-import { Component, OnInit } from '@angular/core';
+import { auth } from 'firebase/app';
 import * as M from '../../assets/materialize/js/materialize.min.js';
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+
+import { AuthService } from './../servicos/auth.service';
 
 @Component({
   selector: 'app-menu-cliente',
   templateUrl: './menu-cliente.component.html',
-  styleUrls: ['./menu-cliente.component.css']
+  styleUrls: ['./menu-cliente.component.css'],
+  providers: [AuthService]
 })
 export class MenuClienteComponent implements OnInit {
 
-  constructor(public afAuth: AngularFireAuth, private router: Router) { }
+  constructor(public authService: AuthService, private router: Router) { }
 
   options = {};
 
@@ -25,7 +28,7 @@ export class MenuClienteComponent implements OnInit {
   }
 
   logOut() {
-    this.afAuth.auth.signOut();
+    this.authService.logOut();
     this.router.navigate(['']);
   }
 

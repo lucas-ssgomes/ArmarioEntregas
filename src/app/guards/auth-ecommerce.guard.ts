@@ -14,7 +14,7 @@ export class AuthEcommerceGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-      if (this.authService.isLoggednInEcommerce()) {
+      if (this.authService.isLoggedIn()) {
         return true;
       }
       this.router.navigate(['loginEcommerce']);

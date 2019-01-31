@@ -41,6 +41,7 @@
       <div class="input-field col s6">
         <input [(ngModel)]="novoEcommerce.senha" #senha="ngModel" id="senha" type="password" class="validate" name="Senha">
         <label for="senha">Senha</label>
+        <span class="helper-text" data-error="wrong" data-success="right">Min. 6 caracteres</span>
       </div>
 
       <div class="input-field col s6">
