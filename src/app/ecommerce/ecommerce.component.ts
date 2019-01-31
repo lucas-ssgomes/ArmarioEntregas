@@ -1,7 +1,10 @@
-import { Ecommerce } from './../models/ecommerce';
-import { Component, OnInit } from '@angular/core';
-import { DbService } from '../servicos/db.service';
 import * as M from '../../assets/materialize/js/materialize.min.js';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+
+import { Ecommerce } from './../models/ecommerce';
+import { DbService } from '../servicos/db.service';
 
 @Component({
   selector: 'app-ecommerce',
@@ -15,7 +18,7 @@ export class EcommerceComponent implements OnInit {
   carregando: boolean;
   options = {};
 
-  constructor(private database: DbService) {
+  constructor(private database: DbService, private afAuth: AngularFireAuth, private router: Router) {
     this.novoEcommerce = new Ecommerce();
     this.carregarUsuarios();
    }
@@ -35,13 +38,19 @@ export class EcommerceComponent implements OnInit {
     });
   }
 
-  cadastrar() {
+  cadastrar(email: string, senha: string) {
+    return new Promise((resolve, reject) => {
+    this.afAuth.auth.createUserWithEmailAndPassword(this.novoEcommerce.email, this.novoEcommerce.senha);
     this.database.inserir('ecommerces', this.novoEcommerce)
-      .then(() => {
+      .then(userData => {
+        resolve(userData);
         this.novoEcommerce = new Ecommerce();
         this.carregarUsuarios();
-        alert('E-commerce Cadastrado com Sucesso');
-      });
+        this.router.navigate(['loginEcommerce']);
+        alert('E-commerce cadastrado com sucesso');
+      },
+      err => reject (alert('err')));
+    });
   }
 
   remover(eid: string) {

@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
 import * as M from '../../assets/materialize/js/materialize.min.js';
+import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 
 import { Cliente } from '../models/cliente';
 import { DbService } from '../servicos/db.service';
-import { AngularFireAuth } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-cliente',
@@ -17,7 +18,7 @@ export class ClienteComponent implements OnInit {
   carregando: boolean;
   options = {};
 
-  constructor(private database: DbService, private afAuth: AngularFireAuth) {
+  constructor(private database: DbService, private afAuth: AngularFireAuth, private router: Router) {
     this.novoCliente = new Cliente();
     this.carregarUsuarios();
   }
@@ -45,9 +46,10 @@ export class ClienteComponent implements OnInit {
         resolve(userData);
         this.novoCliente = new Cliente();
         this.carregarUsuarios();
+        this.router.navigate(['login']);
         alert('Cliente cadastrado com sucesso');
       },
-      err => reject (err));
+      err => reject (alert('err')));
       });
   }
 

@@ -30,6 +30,7 @@ import { MenuLojaFisicaModule } from './menu-loja-fisica/menu-loja-fisica.module
 
 
 @NgModule({
+  // Components
   declarations: [
     AppComponent,
     HomeComponent,
@@ -43,6 +44,8 @@ import { MenuLojaFisicaModule } from './menu-loja-fisica/menu-loja-fisica.module
     LoginEcommerceComponent,
     LoginLojaFisicaComponent,
   ],
+
+  // Modules
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -52,6 +55,7 @@ import { MenuLojaFisicaModule } from './menu-loja-fisica/menu-loja-fisica.module
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
   ],
+  // Services, Guards
   providers: [
     DbService,
     AuthService,

@@ -1,5 +1,8 @@
-import { LojaFisica } from './../models/lojaFisica';
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { Router } from '@angular/router';
+
+import { LojaFisica } from './../models/lojaFisica';
 import { DbService } from '../servicos/db.service';
 
 @Component({
@@ -13,7 +16,7 @@ export class LojaFisicaComponent implements OnInit {
   lojasFisicas: LojaFisica[];
   carregando: boolean;
 
-  constructor(private database: DbService) {
+  constructor(private database: DbService, private afAuth: AngularFireAuth, private router: Router) {
     this.novaLojaFisica = new LojaFisica();
     this.carregarUsuarios();
   }
@@ -29,13 +32,19 @@ export class LojaFisicaComponent implements OnInit {
       });
   }
 
-  cadastrar() {
-    this.database.inserir('lojasFisicas', this.novaLojaFisica)
-      .then(() => {
-        this.novaLojaFisica = new LojaFisica();
-        this.carregarUsuarios();
-        alert('Loja Física Cadastrada com Sucesso');
-      });
+  cadastrar(email: string, senha: string) {
+    return new Promise((resolve, reject) => {
+      this.afAuth.auth.createUserWithEmailAndPassword(this.novaLojaFisica.email, this.novaLojaFisica.senha);
+      this.database.inserir('lojasFisicas', this.novaLojaFisica)
+        .then(userData => {
+          resolve(userData);
+          this.novaLojaFisica = new LojaFisica;
+          this.carregarUsuarios();
+          this.router.navigate(['loginLojaFisica']);
+          alert('Loja Física cadastrada com sucesso');
+        },
+        err => reject (alert('err')));
+    });
   }
 
   remover(eid: string) {
