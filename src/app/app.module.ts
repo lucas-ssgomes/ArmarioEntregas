@@ -9,8 +9,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { DbService } from './servicos/db.service';
 import { AuthService } from './servicos/auth.service';
-import { AuthEcommerceService } from './servicos/auth-ecommerce.service';
-import { AuthLojaFisicaService } from './servicos/auth-loja-fisica.service';
 import { AuthGuard } from './guards/auth.guard';
 import { AuthEcommerceGuard } from './guards/auth-ecommerce.guard';
 import { AuthLojaFisicaGuard } from './guards/auth-loja-fisica.guard';
@@ -57,8 +55,6 @@ import { MenuLojaFisicaModule } from './menu-loja-fisica/menu-loja-fisica.module
   providers: [
     DbService,
     AuthService,
-    AuthEcommerceService,
-    AuthLojaFisicaService,
     AuthGuard,
     AuthEcommerceGuard,
     AuthLojaFisicaGuard,

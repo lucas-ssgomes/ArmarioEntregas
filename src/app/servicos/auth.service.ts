@@ -25,7 +25,10 @@ export class AuthService {
     return this.afAuth.auth.signOut();
   }
 
-  isLoggedIn(): any {
-  }
+  isLoggedIn(): any { }
+
+  isLoggednInEcommerce(): any { }
+
+  isLoggednInLojaFisica(): any {}
 
 }
