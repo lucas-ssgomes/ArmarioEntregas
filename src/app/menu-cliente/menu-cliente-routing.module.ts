@@ -6,9 +6,10 @@ import { ListarPedidoComponent } from './listar-pedido/listar-pedido.component';
 import { MenuClienteComponent } from './menu-cliente.component';
 import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 import { AuthGuard } from '../guards/auth.guard';
+import { AdmGuard } from '../guards/adm.guard';
 
 const menuClienteRoutes = [
-  { path: 'menuCliente', component: MenuClienteComponent, canActivate: [AuthGuard], children: [
+  { path: 'menuCliente', component: MenuClienteComponent, canActivate: [AuthGuard, AdmGuard], children: [
     // Children Login Cliente
     { path: 'listarPedido', component: ListarPedidoComponent},
     // Children Login Cliente

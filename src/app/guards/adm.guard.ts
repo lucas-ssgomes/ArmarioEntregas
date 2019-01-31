@@ -2,22 +2,22 @@ import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { AuthEcommerceService } from '../servicos/auth-ecommerce.service';
+import { AuthAdmService } from '../servicos/auth-adm.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthEcommerceGuard implements CanActivate {
+export class AdmGuard implements CanActivate {
 
-  constructor (private authService: AuthEcommerceService, private router: Router) {}
+  constructor (private authService: AuthAdmService, private router: Router) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-      if (this.authService.isLoggedInEcommerce()) {
+      if (this.authService.isLoggedInAdm()) {
         return true;
       }
-      this.router.navigate(['loginEcommerce']);
+      this.router.navigate(['loginAdm']);
       return false;
   }
 }

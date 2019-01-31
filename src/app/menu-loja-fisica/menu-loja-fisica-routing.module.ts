@@ -1,3 +1,4 @@
+import { AdmGuard } from './../guards/adm.guard';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -9,7 +10,7 @@ import { StatusPedidosComponent } from './status-pedidos/status-pedidos.componen
 import { AuthLojaFisicaGuard } from '../guards/auth-loja-fisica.guard';
 
 const menuLojaFisicaRoutes = [
-  { path: 'menuLojaFisica', component: MenuLojaFisicaComponent, canActivate: [AuthLojaFisicaGuard], children: [
+  { path: 'menuLojaFisica', component: MenuLojaFisicaComponent, canActivate: [AuthLojaFisicaGuard, AdmGuard], children: [
     // Children Login Loja Fisica
     { path: 'guardarPedido', component: GuardarPedidoComponent},
     // Children Login Loja Fisica

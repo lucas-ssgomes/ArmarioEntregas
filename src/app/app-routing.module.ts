@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AuthGuard } from './guards/auth.guard';
+import { AdmGuard } from './guards/adm.guard';
 
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -23,13 +23,13 @@ const routes: Routes = [
   { path: 'cliente', component: ClienteComponent},
   { path: 'ecommerce', component: EcommerceComponent},
   // Adm
-  { path: 'listClientes', component: ListClientesComponent },
+  { path: 'listClientes', component: ListClientesComponent, canActivate: [AdmGuard]},
   // Adm
-  { path: 'listEcommerce', component: ListEcommerceComponent},
+  { path: 'listEcommerce', component: ListEcommerceComponent, canActivate: [AdmGuard]},
   // Adm
-  { path: 'lojaFisica', component: LojaFisicaComponent},
+  { path: 'lojaFisica', component: LojaFisicaComponent, canActivate: [AdmGuard]},
   // Adm
-  { path: 'listLojaFisica', component: ListLojaFisicaComponent},
+  { path: 'listLojaFisica', component: ListLojaFisicaComponent, canActivate: [AdmGuard]},
 ];
 
 @NgModule({

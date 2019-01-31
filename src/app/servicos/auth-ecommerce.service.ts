@@ -3,14 +3,13 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { auth } from 'firebase/app';
-import { DbService } from './db.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class AuthEcommerceService {
 
-  constructor( public afAuth: AngularFireAuth, public dbService: DbService) { }
+  constructor(public afAuth: AngularFireAuth) { }
 
   loginEmail(email: string, senha: string) {
     return new Promise((resolve, reject) => {
@@ -20,17 +19,7 @@ export class AuthService {
       });
   }
 
-  // Não está sendo usado e também não funciona
-  loginGoogle() {
-    return this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-  }
-
-  // Está apresentando erro ao sair do sistema em - login.component.ts
-  logOut() {
-    return this.afAuth.auth.signOut();
-  }
-
-  isLoggedIn() {
+  isLoggedInEcommerce() {
     return this.afAuth.authState.pipe(map(auth => auth));
   }
 }

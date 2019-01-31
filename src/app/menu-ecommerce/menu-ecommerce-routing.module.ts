@@ -1,3 +1,4 @@
+import { AdmGuard } from './../guards/adm.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -8,7 +9,7 @@ import { GerenciarPedidosComponent } from './gerenciar-pedidos/gerenciar-pedidos
 import { AuthEcommerceGuard } from '../guards/auth-ecommerce.guard';
 
 const menuEcommerceRoutes = [
-  { path: 'menuEcommerce', component: MenuEcommerceComponent, canActivate: [AuthEcommerceGuard], children: [
+  { path: 'menuEcommerce', component: MenuEcommerceComponent, canActivate: [AuthEcommerceGuard, AdmGuard], children: [
     // Children Login Ecommerce
     { path: 'criarPedido', component: CriarPedidoComponent},
     // Children Login Ecommerce

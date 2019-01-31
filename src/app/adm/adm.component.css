@@ -1,0 +1,54 @@
+.brand-logo {
+    margin-left: 30px;
+  }
+  
+  h4 {
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+    margin-block-end: 25px;
+  }
+  
+  .dropdown-trigger {
+    margin-left: 235px;
+    margin-right: 225px;
+    margin-block-end: 10px;
+    text-transform: none;
+  }
+  
+  .content {
+    width: 50%;
+    background: white;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+  
+  .input {
+    width: 50%;
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 50%;
+    text-transform: none;
+    background-color: black;
+    float: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+    margin-block-end: 10px;
+  }
+  
+  button:hover {
+    background: black;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #aindaNTemConta {
+    margin-top: 20px;
+  }
+  

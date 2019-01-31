@@ -1,5 +1,5 @@
 <!-- NavBar Principal -->
-<nav class="nav-extended cyan darken-2">
+<nav class="nav-extended black">
   <div class="nav-wrapper">
     <a href='' class="brand-logo">A&E</a>
   </div>
@@ -7,18 +7,18 @@
 
 <!-- Login -->
 <div class="content card col s6">
-  <h4>Login E-commerce</h4>
+  <h4>Login Administrador</h4>
 
   <!-- Dropdown Trigger -->
   <a class='dropdown-trigger btn center' href='#' data-target='dropdown1'>Mudar Usuário<i class="material-icons">arrow_drop_down</i></a>
 
   <!-- Dropdown Structure -->
   <ul id='dropdown1' class='dropdown-content'>
-    <li><a routerLink="../loginEcommerce" class="active">E-commerce</a></li>
+    <li><a routerLink='adm'>Administrador</a></li>
     <li class="divider" tabindex="-1"></li>
-    <li><a routerLink="../login">Cliente</a></li>
+    <li><a routerLink="../login" class="active">Cliente</a></li>
+    <li><a routerLink="../loginEcommerce">E-commerce</a></li>
     <li><a routerLink="../loginLojaFisica">Loja Física</a></li>
-    <li><a routerLink='../loginAdm'>Administrador</a></li>
   </ul>
 
   <!-- Continuação Login -->
@@ -35,13 +35,13 @@
         <label for="senha">Senha</label>
       </div>
 
-      <button class="btn waves-effect waves-light amber darken-1" type="submit" name="action">
+      <button class="btn waves-effect waves-light" type="submit" name="action">
         Entrar</button>
 
-      <!--button class="btn waves-effect waves-light red" type="submit" name="action">
-          Entrar com o Google</button-->
+      <!--button class="btn waves-effect waves-light red" (click)="onLoginGoogle()" name="action">
+        Entrar com o Google</button-->
 
-      <div id="aindaNTemConta">Ainda não tem uma Conta?<a href="../ecommerce"> Clique Aqui</a></div>
+      <div id="aindaNTemConta">Ainda não tem uma Conta?<a href="../cliente/"> Clique Aqui</a></div>
 
     </div>
   </form>
