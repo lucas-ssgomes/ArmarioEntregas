@@ -27,7 +27,7 @@
     "core-js": "^2.5.4",
     "firebase": "^5.7.3",
     "hammerjs": "^2.0.8",
-    "jquery": "^3.0.0",
+    "jquery": "^3.4.0",
     "materialize-css": "^1.0.0-rc.2",
     "ngx-materialize": "^6.1.3",
     "npm-upgrade": "^1.4.1",
